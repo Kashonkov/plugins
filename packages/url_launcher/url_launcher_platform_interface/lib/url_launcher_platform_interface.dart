@@ -42,7 +42,7 @@ abstract class UrlLauncherPlatform extends PlatformInterface {
   LinkDelegate? get linkDelegate;
 
   /// Returns `true` if this platform is able to launch [url].
-  Future<bool> canLaunch(String url) {
+  Future<bool> canLaunch(String url, {String? action}) {
     throw UnimplementedError('canLaunch() has not been implemented.');
   }
 

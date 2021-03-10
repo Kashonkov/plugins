@@ -17,10 +17,10 @@ class MethodChannelUrlLauncher extends UrlLauncherPlatform {
   final LinkDelegate? linkDelegate = null;
 
   @override
-  Future<bool> canLaunch(String url) {
+  Future<bool> canLaunch(String url, {String? action}) {
     return _channel.invokeMethod<bool>(
       'canLaunch',
-      <String, Object>{'url': url},
+      <String, Object?>{'url': url, 'action': action},
     ).then((value) => value ?? false);
   }
 

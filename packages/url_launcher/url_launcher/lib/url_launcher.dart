@@ -119,8 +119,8 @@ Future<bool> launch(
 /// visibility configuration is not provided in the AndroidManifest.xml file.
 /// For more information see the [Managing package visibility](https://developer.android.com/training/basics/intents/package-visibility)
 /// article in the Android docs.
-Future<bool> canLaunch(String urlString) async {
-  return await UrlLauncherPlatform.instance.canLaunch(urlString);
+Future<bool> canLaunch(String urlString, {String? action}) async {
+  return await UrlLauncherPlatform.instance.canLaunch(urlString, action: action);
 }
 
 /// Closes the current WebView, if one was previously opened via a call to [launch].

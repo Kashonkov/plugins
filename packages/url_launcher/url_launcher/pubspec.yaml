@@ -33,10 +33,22 @@ dependencies:
   # validation, so we set a ^ constraint.
   # TODO(amirh): Revisit this (either update this part in the  design or the pub tool).
   # https://github.com/flutter/flutter/issues/46264
-  url_launcher_linux: ^2.0.0
-  url_launcher_macos: ^2.0.0
-  url_launcher_windows: ^2.0.0
-  url_launcher_web: ^2.0.0
+  url_launcher_linux:
+    git:
+      url: https://github.com/Kashonkov/plugins.git
+      path: packages/url_launcher/url_launcher_linux
+  url_launcher_macos:
+    git:
+      url: https://github.com/Kashonkov/plugins.git
+      path: packages/url_launcher/url_launcher_macos
+  url_launcher_windows:
+    git:
+      url: https://github.com/Kashonkov/plugins.git
+      path: packages/url_launcher/url_launcher_windows
+  url_launcher_web:
+    git:
+      url: https://github.com/Kashonkov/plugins.git
+      path: packages/url_launcher/url_launcher_web
 
 dev_dependencies:
   flutter_test:
